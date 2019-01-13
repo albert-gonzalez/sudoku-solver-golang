@@ -1,0 +1,11 @@
+version: '3'
+services:
+  golang:
+    image: golang:1
+    working_dir:
+      /usr/src/sugoku
+    volumes:
+      - ./dist:/usr/dist/sugoku
+      - ./src:/usr/src/sugoku
+    command: go build -v -o ../../dist/sugoku/sugoku
+
